@@ -2,9 +2,10 @@
   'React ES6 Component':
     'prefix': 'rcc'
     'body': """
-      import React, { Component, PropTypes } from 'react'
+      import React, { Component } from 'react'
+      import PropTypes from 'prop-types'
 
-      export default class ${1:MyComponent} extends Component {
+      class ${1:MyComponent} extends Component {
         render() {
           return (${2:<div>MyComponent</div>})
         }
@@ -13,13 +14,16 @@
       ${1}.propTypes = {
       }
 
+      export default ${1}
+
     """
   'React ES6 Component with Constructor':
     'prefix': 'rccp'
     'body': """
-      import React, { Component, PropTypes } from 'react'
+      import React, { Component } from 'react'
+      import PropTypes from 'prop-types'
 
-      export default class ${1:MyComponent} extends Component {
+      class ${1:MyComponent} extends Component {
         constructor(props) {
           super(props)
         }
@@ -31,6 +35,11 @@
 
       ${1}.propTypes = {
       }
+
+      ${1}.defaultProps = {
+      }
+
+      export default ${1}
 
     """
   'React ES6 Constructor':
@@ -45,9 +54,10 @@
   'React ES6 Functional Component':
     'prefix': 'rscp'
     'body': """
-      import React, { PropTypes } from 'react'
+      import React from 'react'
+      import PropTypes from 'prop-types'
 
-      export default function ${1}(props) {
+      const ${1}(props) {
         return (
           ${2:<div>MyComponent</div>}
         )
@@ -55,6 +65,12 @@
 
       ${1}.propTypes = {
       }
+
+      ${1}.defaultProps = {
+      }
+
+      export default ${1}
+
     """
   'React ES6 bind method to this':
     'prefix': 'rbm',
