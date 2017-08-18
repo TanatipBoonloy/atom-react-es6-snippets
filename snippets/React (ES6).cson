@@ -68,7 +68,13 @@
         ${2}
       }
     """
-
+'React ES6 default props value':
+  'prefix': 'dp',
+  'body': """
+    ${1}.defaultProps = {
+      ${2}
+    }
+  """
 
   # PropType string
   'React PropType string':
