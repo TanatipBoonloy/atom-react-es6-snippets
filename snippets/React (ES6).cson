@@ -1,6 +1,6 @@
 '.source.js.jsx':
   'React ES6 Component':
-    'prefix': 'rc'
+    'prefix': 'rcc'
     'body': """
       import React, { Component, PropTypes } from 'react';
 
@@ -15,7 +15,7 @@
 
     """
   'React ES6 Component with Constructor':
-    'prefix': 'rcc'
+    'prefix': 'rccp'
     'body': """
       import React, { Component, PropTypes } from 'react';
 
@@ -34,7 +34,7 @@
 
     """
   'React ES6 Constructor':
-    'prefix': 'rconst'
+    'prefix': 'con'
     'body': """
       constructor(props) {
         super(props);
@@ -43,7 +43,7 @@
 
     """
   'React ES6 Functional Component':
-    'prefix': 'rfunc'
+    'prefix': 'rscp'
     'body': """
       import React, { PropTypes } from 'react';
 
@@ -62,7 +62,7 @@
       this.${1} = this.${1}.bind(this);
     """
   'React ES6 props definition':
-    'prefix': 'rpd',
+    'prefix': 'pt',
     'body': """
       ${1}.propTypes = {
         ${2}
@@ -72,70 +72,70 @@
 
   # PropType string
   'React PropType string':
-    'prefix': 'rpstr',
+    'prefix': 'pts',
     'body': "${1:myProp}: PropTypes.string,"
   'React PropType string required':
-    'prefix': 'rpstrr',
+    'prefix': 'ptsr',
     'body': "${1:myProp}: PropTypes.string.isRequired,"
 
   # PropType number
   'React PropType number':
-    'prefix': 'rpn',
+    'prefix': 'ptn',
     'body': "${1:myProp}: PropTypes.number,"
   'React PropType number required':
-    'prefix': 'rpnr',
+    'prefix': 'ptnr',
     'body': "${1:myProp}: PropTypes.number.isRequired,"
 
   # PropType object
   'React PropType object':
-    'prefix': 'rpo',
+    'prefix': 'pto',
     'body': "${1:myProp}: PropTypes.object,"
   'React PropType object required':
-    'prefix': 'rpor',
+    'prefix': 'ptor',
     'body': "${1:myProp}: PropTypes.object.isRequired,"
 
   # PropType array
   'React PropType array':
-    'prefix': 'rpa',
+    'prefix': 'pta',
     'body': "${1:myProp}: PropTypes.array,"
   'React PropType array required':
-    'prefix': 'rpar',
+    'prefix': 'ptar',
     'body': "${1:myProp}: PropTypes.array.isRequired,"
 
   # PropType bool
   'React PropType bool':
-    'prefix': 'rpb',
+    'prefix': 'ptb',
     'body': "${1:myProp}: PropTypes.bool,"
   'React PropType bool required':
-    'prefix': 'rpbr',
+    'prefix': 'ptbr',
     'body': "${1:myProp}: PropTypes.bool.isRequired,"
 
   # PropType element
   'React PropType element':
-    'prefix': 'rpe',
+    'prefix': 'pte',
     'body': "${1:myProp}: PropTypes.element,"
   'React PropType element required':
-    'prefix': 'rper',
+    'prefix': 'pter',
     'body': "${1:myProp}: PropTypes.element.isRequired,"
 
   # PropType function
   'React PropType function':
-    'prefix': 'rpf',
+    'prefix': 'ptf',
     'body': "${1:myProp}: PropTypes.func,"
   'React PropType function required':
-    'prefix': 'rpfr',
+    'prefix': 'ptfr',
     'body': "${1:myProp}: PropTypes.func.isRequired,"
 
   # PropType shape
   'React PropType shape':
-    'prefix': 'rps',
+    'prefix': 'ptsh',
     'body': """
       ${1:myProp}: PropTypes.shape({
         ${2}
       }),
     """
   'React PropType shape required':
-    'prefix': 'rpsr',
+    'prefix': 'ptshr',
     'body': """
       ${1:myProp}: PropTypes.shape({
         ${2}
