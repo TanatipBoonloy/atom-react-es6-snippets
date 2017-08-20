@@ -57,11 +57,11 @@
       import React from 'react'
       import PropTypes from 'prop-types'
 
-      const ${1}(props) {
+      const ${1} = (props) => ${2:{
         return (
-          ${2:<div>MyComponent</div>}
+          ${3:<div></div>}
         )
-      }
+      }}
 
       ${1}.propTypes = {
       }
@@ -84,82 +84,82 @@
         ${2}
       }
     """
-'React ES6 default props value':
-  'prefix': 'dp',
-  'body': """
-    ${1}.defaultProps = {
-      ${2}
-    }
-  """
+  'React ES6 default props value':
+    'prefix': 'dp',
+    'body': """
+      ${1}.defaultProps = {
+        ${2}
+      }
+    """
 
   # PropType string
   'React PropType string':
     'prefix': 'pts',
-    'body': "${1:myProp}: PropTypes.string,"
+    'body': "PropTypes.string,${1}"
   'React PropType string required':
     'prefix': 'ptsr',
-    'body': "${1:myProp}: PropTypes.string.isRequired,"
+    'body': "PropTypes.string.isRequired,${1}"
 
   # PropType number
   'React PropType number':
     'prefix': 'ptn',
-    'body': "${1:myProp}: PropTypes.number,"
+    'body': "PropTypes.number,${1}"
   'React PropType number required':
     'prefix': 'ptnr',
-    'body': "${1:myProp}: PropTypes.number.isRequired,"
+    'body': "PropTypes.number.isRequired,${1}"
 
   # PropType object
   'React PropType object':
     'prefix': 'pto',
-    'body': "${1:myProp}: PropTypes.object,"
+    'body': "PropTypes.object,${1}"
   'React PropType object required':
     'prefix': 'ptor',
-    'body': "${1:myProp}: PropTypes.object.isRequired,"
+    'body': "PropTypes.object.isRequired,${1}"
 
   # PropType array
   'React PropType array':
     'prefix': 'pta',
-    'body': "${1:myProp}: PropTypes.array,"
+    'body': "PropTypes.array,${1}"
   'React PropType array required':
     'prefix': 'ptar',
-    'body': "${1:myProp}: PropTypes.array.isRequired,"
+    'body': "PropTypes.array.isRequired,${1}"
 
   # PropType bool
   'React PropType bool':
     'prefix': 'ptb',
-    'body': "${1:myProp}: PropTypes.bool,"
+    'body': "PropTypes.bool,${1}"
   'React PropType bool required':
     'prefix': 'ptbr',
-    'body': "${1:myProp}: PropTypes.bool.isRequired,"
+    'body': "PropTypes.bool.isRequired,${1}"
 
   # PropType element
   'React PropType element':
     'prefix': 'pte',
-    'body': "${1:myProp}: PropTypes.element,"
+    'body': "PropTypes.element,${1}"
   'React PropType element required':
     'prefix': 'pter',
-    'body': "${1:myProp}: PropTypes.element.isRequired,"
+    'body': "PropTypes.element.isRequired,${1}"
 
   # PropType function
   'React PropType function':
     'prefix': 'ptf',
-    'body': "${1:myProp}: PropTypes.func,"
+    'body': "PropTypes.func,${1}"
   'React PropType function required':
     'prefix': 'ptfr',
-    'body': "${1:myProp}: PropTypes.func.isRequired,"
+    'body': "PropTypes.func.isRequired,${1}"
 
   # PropType shape
   'React PropType shape':
     'prefix': 'ptsh',
     'body': """
-      ${1:myProp}: PropTypes.shape({
-        ${2}
+      PropTypes.shape({
+        ${1}
       }),
     """
   'React PropType shape required':
     'prefix': 'ptshr',
     'body': """
-      ${1:myProp}: PropTypes.shape({
-        ${2}
+      PropTypes.shape({
+        ${1}
       }).isRequired,
     """
