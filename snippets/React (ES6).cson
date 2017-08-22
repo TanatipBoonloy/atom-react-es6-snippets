@@ -72,6 +72,14 @@
       export default ${1}
 
     """
+  'React ES6 Component Did Mount':
+    'prefix': 'cdm'
+    'body': """
+      componentDidMount() {
+        ${1}
+      }
+
+    """
   'React ES6 bind method to this':
     'prefix': 'rbm',
     'body': """
