@@ -1,9 +1,9 @@
 '.source.js.jsx':
+  # React Component
   'React ES6 Component':
     'prefix': 'rcc'
     'body': """
       import React, { Component } from 'react'
-      import PropTypes from 'prop-types'
 
       class ${1:MyComponent} extends Component {
         render() {
@@ -11,10 +11,7 @@
         }
       }
 
-      ${1}.propTypes = {
-      }
-
-      export default ${1}
+      export default ${1:MyComponent}
 
     """
   'React ES6 Component with Constructor':
@@ -29,26 +26,31 @@
         }
 
         render() {
-          return (${2:<div>MyComponent</div>})
+          return (${2:<div></div>})
         }
       }
 
-      ${1}.propTypes = {
+      ${1:MyComponent}.propTypes = {
       }
 
-      ${1}.defaultProps = {
+      ${1:MyComponent}.defaultProps = {
       }
 
-      export default ${1}
+      export default ${1:MyComponent}
 
     """
-  'React ES6 Constructor':
-    'prefix': 'con'
+  'React ES6 Functional Component':
+    'prefix': 'rsc'
     'body': """
-      constructor(props) {
-        super(props)
-        ${1}
-      }
+      import React from 'react'
+
+      const ${1:MyComponent} = () => ${2:{
+        return (
+          ${3:<div></div>}
+        )
+      }}
+
+      export default ${1:MyComponent}
 
     """
   'React ES6 Functional Component':
@@ -72,6 +74,29 @@
       export default ${1}
 
     """
+
+  'React ES6 Constructor':
+    'prefix': 'con'
+    'body': """
+      constructor(props) {
+        super(props)
+        ${1}
+      }
+
+    """
+
+  # React Props & State
+  'React ES6 props':
+    'prefix': 'pr'
+    'body': "${1:this.}props${2}"
+  'React ES6 state':
+    'prefix': 'st'
+    'body': "this.state"
+  'React ES6 setState':
+    'prefix': 'sst'
+    'body': "this.setState(${1:(prevState) => ()})"
+
+  # React Component Lifecycle
   'React ES6 Component Did Mount':
     'prefix': 'cdm'
     'body': """
@@ -80,6 +105,47 @@
       }
 
     """
+  'React ES6 Component Will Receive Props':
+    'prefix': 'cwr'
+    'body': """
+      componentWillReceiveProps(nextProps) {
+        ${1}
+      }
+
+    """
+  'React ES6 Should Component Update':
+    'prefix': 'scu'
+    'body': """
+      shouldComponentUpdate(nextProps, nextState) {
+        ${1}
+      }
+
+    """
+  'React ES6 Component Will Update':
+    'prefix': 'cwup'
+    'body': """
+      componentWillUpdate(nextProps, nextState) {
+        ${1}
+      }
+
+    """
+  'React ES6 Component Did Update':
+    'prefix': 'cdup'
+    'body': """
+      componentDidUpdate(prevProps, prevState) {
+        ${1}
+      }
+
+    """
+  'React ES6 Component Will Unmount':
+    'prefix': 'cdun'
+    'body': """
+      componentWillUnmount() {
+        ${1}
+      }
+
+    """
+
   'React ES6 bind method to this':
     'prefix': 'rbm',
     'body': """
