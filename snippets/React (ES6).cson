@@ -190,6 +190,14 @@
     'prefix': 'ptor',
     'body': "PropTypes.object.isRequired,${1}"
 
+  # PropType any
+  'React PropType any':
+    'prefix': 'ptan',
+    'body': "PropTypes.any,${1}"
+  'React PropType array required':
+    'prefix': 'ptanr',
+    'body': "PropTypes.any.isRequired,${1}"
+
   # PropType array
   'React PropType array':
     'prefix': 'pta',
@@ -237,3 +245,8 @@
         ${1}
       }).isRequired,
     """
+
+  # Utils
+  'React children PropType':
+    'prefix': 'children',
+    'body': "children: PropTypes.any,${1}"
