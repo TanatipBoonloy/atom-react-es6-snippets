@@ -182,6 +182,14 @@
     'prefix': 'ptnr',
     'body': "PropTypes.number.isRequired,${1}"
 
+  # PropType node
+  'React PropType node':
+    'prefix': 'ptno',
+    'body': "PropTypes.node,${1}"
+  'React PropType number required':
+    'prefix': 'ptnor',
+    'body': "PropTypes.node.isRequired,${1}"
+
   # PropType object
   'React PropType object':
     'prefix': 'pto',
@@ -194,7 +202,7 @@
   'React PropType any':
     'prefix': 'ptan',
     'body': "PropTypes.any,${1}"
-  'React PropType array required':
+  'React PropType any required':
     'prefix': 'ptanr',
     'body': "PropTypes.any.isRequired,${1}"
 
@@ -205,6 +213,14 @@
   'React PropType array required':
     'prefix': 'ptar',
     'body': "PropTypes.array.isRequired,${1}"
+
+  # PropType arrayOf
+  'React PropType arrayOf':
+    'prefix': 'ptao',
+    'body': "PropTypes.arrayOf(${1}),"
+  'React PropType array required':
+    'prefix': 'ptaor',
+    'body': "PropTypes.arrayOf(${1}).isRequired,"
 
   # PropType bool
   'React PropType bool':
@@ -246,7 +262,44 @@
       }).isRequired,
     """
 
+  # PropType oneOf
+  'React PropType oneOf':
+    'prefix': 'ptof',
+    'body': """
+      PropTypes.oneOf([
+        ${1}
+      ]),
+    """
+  'React PropType oneOf required':
+    'prefix': 'ptofr',
+    'body': """
+      PropTypes.oneOf([
+        ${1}
+      ]).isRequired,
+    """
+
+  # PropType oneOfType
+  'React PropType oneOfType':
+    'prefix': 'ptot',
+    'body': """
+      PropTypes.oneOfType([
+        ${1}
+      ]),
+    """
+  'React PropType oneOfType required':
+    'prefix': 'ptotr',
+    'body': """
+      PropTypes.oneOfType([
+        ${1}
+      ]).isRequired,
+    """
+
   # Utils
   'React children PropType':
-    'prefix': 'children',
-    'body': "children: PropTypes.any,${1}"
+    'prefix': 'chp',
+    'body': """
+      children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
+      ]),${1}
+    """
